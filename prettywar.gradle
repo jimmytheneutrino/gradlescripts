@@ -1,0 +1,12 @@
+def prettyWar(s) {
+	war {
+		duplicatesStrategy = 'exclude'
+		
+		println('^');
+		configurations[s].filter({it.name.endsWith(".war")}).each {
+			from zipTree(it)
+			println('* ' + it.name)
+		}
+		println(' ');
+	}
+}
