@@ -1,4 +1,4 @@
-def prettyWar(s) {
+ext.prettyWar = { s -> 
 	war {
 		duplicatesStrategy = 'exclude'
 		
